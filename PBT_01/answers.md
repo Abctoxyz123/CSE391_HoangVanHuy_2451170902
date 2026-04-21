@@ -1,4 +1,4 @@
-Câu A1
+hCâu A1 — HTTP & Browser
 1.  
 B1: Trình duyệt kiểm tra cache DNS → nếu chưa có thì gửi yêu cầu đến DNS server để phân giải tên miền shopee.vn thành địa chỉ IP.
 B2: Trình duyệt thiết lập kết nối TCP với server (3-way handshake).
@@ -17,7 +17,7 @@ B8: Xây dựng CSSOM và render tree → tiến hành layout và paint để hi
 - Tổng thời gian load trang: 1.57s
 
 
-Câu A2
+Câu A2 — Semantic HTML
 Trước khi sửa:
 <div class="header">
     <div class="logo">ShopTLU</div>
@@ -66,7 +66,7 @@ Sau khi sửa :
     <p>© 2026 ShopTLU</p>
 </footer>
 
-Câu A3
+Câu A3 — Block vs Inline
 ![image html code](screenshots/Câu%20A3.png)
 
 Câu A4
@@ -75,6 +75,22 @@ giải thích sự khác nhau giữa <thead>,<tbody>,<tfoot>
 <tbody> dùng để chứa phần dữ liệu chính, các bản ghi
 <tfoot> dùng để hiện thị tổng kết 
 
+Bài B3 — Debug HTML
+Lỗi 1: Dòng 1 - khai báo DOCTYPE không đúng chuẩn - sửa lại thành <!DOCTYPE html>
+Lỗi 2: Dòng 4 - <title> không đóng thẻ - bổ sung thẻ đóng <title>Trang web</title>
+Lỗi 3: Dòng 5 - utf8 viết sai - sửa lại thành <meata charset="UTF-8">
+Lỗi 4: Dòng 8 - thẻ <h1> đóng sai - sửa lại <h1>Welcome to ShopTLU</h1>
+Lỗi 5: Dòng 12 - link không hợp lệ href="home" - sửa lại href="#home"
+Lỗi 6: Dòng 12 - thẻ <h1> đóng sai - sửa lại <a href="#home">Trang chủ</a>
+Lỗi 7: Dòng 20 - thẻ <img> thuộc tính src thiếu "" và alt - sửa lại <img src="iphone.jpg" alt="iphone16pro">
+Lỗi 8: Dòng 22 - đóng sai thứ tự các thẻ - <p>Giá: <b>25.990.000đ</b></p>
+Lỗi 9: Dòng 27 - table thiếu thẻ <thead> và <tbody> - thêm vào <thead> và <tbody>
+Lỗi 10: Dòng 29 - dùng <td> cho header - dùng <th> cho header của bảng
+Lỗi 11: Dòng 40 - dùng 2 <main> - bỏ thẻ <main> thay bằng <aside> vì <aside> thường được dùng làm thanh bên để chứa danh mục bài viết
+Lỗi 12: Dòng 45 - không đóng thẻ <p> - đóng thẻ <p> thành <p>Coryright 2026</p>
+Lỗi 13: Thiếu <html lang="vi>
+Lỗi 14: Thiếu <meta view="viewport" content="width=device-width, initial-scale=1.0">
+Lỗi 15: Thiếu thẻ đóng </html> - thêm thẻ đóng </html>
 
 
 
