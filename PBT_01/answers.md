@@ -99,11 +99,14 @@ Bài B3 — Debug HTML
 Bài B4 — Phân tích trang web thật
 1. Trang web: thegioididong.com
 - Thẻ img ở đầu trang 
+
 ![screenshot img](screenshots/Screenshot_TGDD_img.png)
 - Thẻ h1 ở đầu trang 
+
 ![screenshot header-h1](<screenshots/Screenshot_TGDD header-h1.png>)
 - Thẻ header cũng ở phần đầu trang 
 - Thẻ footer ở cuối trang 
+
 ![screenshot footer](screenshots/Screenshot_TGDD_footer.png)
 2. 
 - Không tìm thấy thẻ table được sử dụng trong trang web
