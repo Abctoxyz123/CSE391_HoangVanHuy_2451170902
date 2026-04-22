@@ -10,8 +10,8 @@ B7: Trình duyệt tải các tài nguyên liên quan (CSS, JS, ảnh...).
 B8: Xây dựng CSSOM và render tree → tiến hành layout và paint để hiển thị trang web.
 
 2. 
-![Screenshot network tab](screenshots/Screenshot%20tabNetwork.png)
-![Request returns cssfile](screenshots/Screenshot%20fileCSS.png)
+![screenshot netword tab](screenshots/Screenshot_tabNetwork.png)
+![Request returns cssfile](screenshots/Screenshot_fileCSS.png)
 
 - Status Code request đầu tiên: 200
 - Tổng thời gian load trang: 1.57s
@@ -67,7 +67,7 @@ Sau khi sửa :
 </footer>
 
 Câu A3 — Block vs Inline
-![image html code](screenshots/Câu%20A3.png)
+![img htmle code](screenshots/Câu_A3.png)
 
 Câu A4
 giải thích sự khác nhau giữa <thead>,<tbody>,<tfoot>
@@ -94,14 +94,14 @@ Lỗi 15: Thiếu thẻ đóng </html> - thêm thẻ đóng </html>
 
 Bài B4 — Phân tích trang web thật
 1. Trang web: thegioididong.com
-- Thẻ <img> ở đầu trang ![screenshot img](<screenshots/Screenshot TGDD-img.png>)
-- Thẻ <h1> ở đầu trang ![screenshot h1-header](<screenshots/Screenshot_TGDD header-h1.png>)
+- Thẻ <img> ở đầu trang ![screenshot <img>](screenshots/Screenshot_TGDD_img.png)
+- Thẻ <h1> ở đầu trang ![screenshot <header>-<h1>](<screenshots/Screenshot_TGDD header-h1.png>)
 - Thẻ <header> cũng ở phần đầu trang 
-- Thẻ <footer> ở cuối trang ![screenshot footer](<Screenshot TGDD-footer.png>)
+- Thẻ <footer> ở cuối trang ![screenshot <footer>](screenshots/Screenshot_TGDD_footer.png)
 2. 
 - Không tìm thấy <table> được sử dụng trong trang web
 3. 
-![screenshot form](<screenshots/Screenshot TGDD-form.png>)
+![screenshot <form>](screenshots/Screenshot_TGDD_form.png)
 - action: /timkiem
 - method: GET (mặc định)
 - input types: text
