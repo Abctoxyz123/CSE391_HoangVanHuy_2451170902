@@ -1,13 +1,13 @@
-hCâu A1 — HTTP & Browser
+Câu A1 — HTTP & Browser
 1.  
-B1: Trình duyệt kiểm tra cache DNS → nếu chưa có thì gửi yêu cầu đến DNS server để phân giải tên miền shopee.vn thành địa chỉ IP.
-B2: Trình duyệt thiết lập kết nối TCP với server (3-way handshake).
-B3: Nếu là HTTPS, thực hiện TLS handshake để mã hóa kết nối.
-B4: Trình duyệt gửi HTTP request (GET /) đến server.
-B5: Server xử lý và trả về HTTP response (HTML, CSS, JS, hình ảnh...).
-B6: Trình duyệt nhận HTML → parse thành DOM.
-B7: Trình duyệt tải các tài nguyên liên quan (CSS, JS, ảnh...).
-B8: Xây dựng CSSOM và render tree → tiến hành layout và paint để hiển thị trang web.
+- Bước 1: Trình duyệt kiểm tra cache DNS → nếu chưa có thì gửi yêu cầu đến DNS server để phân giải tên miền shopee.vn thành địa chỉ IP.
+- Bước 2: Trình duyệt thiết lập kết nối TCP với server (3-way handshake).
+- Bước 3: Nếu là HTTPS, thực hiện TLS handshake để mã hóa kết nối.
+- Bước 4: Trình duyệt gửi HTTP request (GET /) đến server.
+- Bước 5: Server xử lý và trả về HTTP response (HTML, CSS, JS, hình ảnh...).
+- Bước 6: Trình duyệt nhận HTML → parse thành DOM.
+- Bước 7: Trình duyệt tải các tài nguyên liên quan (CSS, JS, ảnh...).
+- Bước 8: Xây dựng CSSOM và render tree → tiến hành layout và paint để hiển thị trang web.
 
 2. 
 ![screenshot netword tab](screenshots/Screenshot_tabNetwork.png)
@@ -19,7 +19,7 @@ B8: Xây dựng CSSOM và render tree → tiến hành layout và paint để hi
 
 Câu A2 — Semantic HTML
 Trước khi sửa:
-<div class="header">
+<!-- <div class="header">
     <div class="logo">ShopTLU</div>
     <div class="menu">
         <div><a href="/">Trang chủ</a></div>
@@ -33,11 +33,11 @@ Trước khi sửa:
         <div class="image"><img src="iphone.jpg"></div>
     </div>
 </div>
-<div class="footer">© 2026 ShopTLU</div>
+<div class="footer">© 2026 ShopTLU</div> -->
 
-Website bị Goodle đánh giá SEO thấp vì:
+- Website bị Goodle đánh giá SEO thấp vì:
 + sử dụng quá nhiều thẻ div không mang ý nghĩa
-Lỗi semantic:
+- Lỗi semantic:
 + phần header dùng thẻ <div>
 + phần nav dùng thẻ <div>
 + phần main dùng thẻ <div>
@@ -45,7 +45,7 @@ Lỗi semantic:
 + không có thuộc tính alt cho ảnh
 
 Sau khi sửa :
-<header>
+<!-- <header>
     <div class="logo">ShopTLU</div>
     <nav>
         <a href="/">Trang chủ</a>
@@ -63,19 +63,19 @@ Sau khi sửa :
 
 <footer>
     <p>© 2026 ShopTLU</p>
-</footer>
+</footer> -->
 
 Câu A3 — Block vs Inline
 ![img htmle code](screenshots/Câu_A3.png)
 
 Câu A4
-giải thích sự khác nhau giữa <thead>,<tbody>,<tfoot>
-<thead> dùng cho tiêu đề cột
-<tbody> dùng để chứa phần dữ liệu chính, các bản ghi
-<tfoot> dùng để hiện thị tổng kết 
+- giải thích sự khác nhau giữa thead,tbody,tfoot
++ thead dùng cho tiêu đề cột
++ tbody dùng để chứa phần dữ liệu chính, các bản ghi
++ tfoot dùng để hiện thị tổng kết 
 
 Bài B3 — Debug HTML
-Lỗi 1: Dòng 1 - khai báo DOCTYPE không đúng chuẩn - sửa lại thành <!DOCTYPE html>
+- Lỗi 1: Dòng 1 - khai báo DOCTYPE không đúng chuẩn - sửa lại thành <!--<!DOCTYPE html>-->
 Lỗi 2: Dòng 4 - <title> không đóng thẻ - bổ sung thẻ đóng <title>Trang web</title>
 Lỗi 3: Dòng 5 - utf8 viết sai - sửa lại thành <meata charset="UTF-8">
 Lỗi 4: Dòng 8 - thẻ <h1> đóng sai - sửa lại <h1>Welcome to ShopTLU</h1>
@@ -105,6 +105,92 @@ Bài B4 — Phân tích trang web thật
 - method: GET (mặc định)
 - input types: text
 
-
+Câu C1
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+</head>
+<body>
+    <header>
+        <h1>Logo</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <nav aria-label="breamcrumb">
+            <ol>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Điện thoại</a></li>
+                <li>iPhone 16</li>
+            </ol>
+        </nav>
+        <section id="product-overview">
+            <img src="" alt="ảnh viền trái">
+            <img src="" alt="ảnh viền phải">
+            <img src="" alt="ảnh máy trước">
+            <img src="" alt="ảnh mặt sau">
+            <img src="" alt="ảnh trên tay">
+            <h2>iPhone 16 Pro Max</h2>
+            <p>Giá: 29.000.000đ</p>
+            <p>Đánh giá: 5 sao</p>
+            <p>Mô tả: iPhone 16 Pro Max là đỉnh cao công nghệ mới nhất của Apple với màn hình LTPO Super Retina XDR lớn hơn, mang lại trải nghiệm thị giác cực kỳ mãn nhãn.
+            Máy được trang bị chip A18 Pro mạnh mẽ vượt trội, tối ưu hóa cho các tác vụ AI thông minh và khả năng chơi game đồ họa đỉnh cao mượt mà.
+            Hệ thống camera được nâng cấp mạnh mẽ với nút điều khiển Camera Control mới, giúp người dùng quay phim và chụp ảnh chuyên nghiệp chỉ trong một cú chạm.
+            Thiết kế khung viền Titan bền bỉ cùng thời lượng pin tốt nhất từ trước đến nay giúp đây trở thành lựa chọn hàng đầu cho người dùng đam mê công nghệ và sự sang trọng.
+            </p>
+        </section>
+        <section>
+            <h3>Thông số kỹ thuật</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Đặc tính</th>
+                        <th>Thông số</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kích thước màn hình</td>
+                        <td>6.7 inch</td>
+                    </tr>
+                    <tr>
+                        <td>Chipset</td>
+                        <td>A18 Pro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h3>Đánh giá từ người dùng</h3>
+            <article>
+                <h4>Nguyễn Văn A</h4>
+                <p>Sản phẩm tốt, giao hàng nhanh</p>
+            </article>
+            <article>
+                <h4>Nguyễn Thị B</h4>
+                <p>Máy đẹp, chất lượng phục vụ tốt</p>
+            </article>
+        </section>
+        <aside>
+            <h3>Sản phẩm tương tự</h3>
+            <ul>
+                <li>iPhone 17 Pro Max</li>
+                <li>Samsung S26 Ultra</li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2026 CSE391 - Hoàng Văn Huy</p>
+    </footer>
+</body>
+</html>
 
 
