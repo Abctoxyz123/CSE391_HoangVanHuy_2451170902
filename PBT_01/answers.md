@@ -1,4 +1,5 @@
 Câu A1 — HTTP & Browser
+
 1.  
 - Bước 1: Trình duyệt kiểm tra cache DNS → nếu chưa có thì gửi yêu cầu đến DNS server để phân giải tên miền shopee.vn thành địa chỉ IP.
 - Bước 2: Trình duyệt thiết lập kết nối TCP với server (3-way handshake).
@@ -36,13 +37,13 @@ Trước khi sửa:
 <div class="footer">© 2026 ShopTLU</div> -->
 
 - Website bị Goodle đánh giá SEO thấp vì:
-+ sử dụng quá nhiều thẻ div không mang ý nghĩa
+    + sử dụng quá nhiều thẻ div không mang ý nghĩa
 - Lỗi semantic:
-+ phần header dùng thẻ <div>
-+ phần nav dùng thẻ <div>
-+ phần main dùng thẻ <div>
-+ phần product dùng thẻ <div>
-+ không có thuộc tính alt cho ảnh
+    + phần header dùng thẻ <div>
+    + phần nav dùng thẻ <div>
+    + phần main dùng thẻ <div>
+    + phần product dùng thẻ <div>
+    + không có thuộc tính alt cho ảnh
 
 Sau khi sửa :
 <!-- <header>
