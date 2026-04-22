@@ -71,35 +71,35 @@ Câu A3 — Block vs Inline
 
 Câu A4
 - giải thích sự khác nhau giữa thead,tbody,tfoot
-+ thead dùng cho tiêu đề cột
-+ tbody dùng để chứa phần dữ liệu chính, các bản ghi
-+ tfoot dùng để hiện thị tổng kết 
+    + thead dùng cho tiêu đề cột
+    + tbody dùng để chứa phần dữ liệu chính, các bản ghi
+    + tfoot dùng để hiện thị tổng kết 
 
 Bài B3 — Debug HTML
-- Lỗi 1: Dòng 1 - khai báo DOCTYPE không đúng chuẩn - sửa lại thành <!--<!DOCTYPE html>-->
-Lỗi 2: Dòng 4 - <title> không đóng thẻ - bổ sung thẻ đóng <title>Trang web</title>
-Lỗi 3: Dòng 5 - utf8 viết sai - sửa lại thành <meata charset="UTF-8">
-Lỗi 4: Dòng 8 - thẻ <h1> đóng sai - sửa lại <h1>Welcome to ShopTLU</h1>
-Lỗi 5: Dòng 12 - link không hợp lệ href="home" - sửa lại href="#home"
-Lỗi 6: Dòng 12 - thẻ <h1> đóng sai - sửa lại <a href="#home">Trang chủ</a>
-Lỗi 7: Dòng 20 - thẻ <img> thuộc tính src thiếu "" và alt - sửa lại <img src="iphone.jpg" alt="iphone16pro">
-Lỗi 8: Dòng 22 - đóng sai thứ tự các thẻ - <p>Giá: <b>25.990.000đ</b></p>
-Lỗi 9: Dòng 27 - table thiếu thẻ <thead> và <tbody> - thêm vào <thead> và <tbody>
-Lỗi 10: Dòng 29 - dùng <td> cho header - dùng <th> cho header của bảng
-Lỗi 11: Dòng 40 - dùng 2 <main> - bỏ thẻ <main> thay bằng <aside> vì <aside> thường được dùng làm thanh bên để chứa danh mục bài viết
-Lỗi 12: Dòng 45 - không đóng thẻ <p> - đóng thẻ <p> thành <p>Coryright 2026</p>
-Lỗi 13: Thiếu <html lang="vi>
-Lỗi 14: Thiếu <meta view="viewport" content="width=device-width, initial-scale=1.0">
-Lỗi 15: Thiếu thẻ đóng </html> - thêm thẻ đóng </html>
+- Lỗi 1: Dòng 1 - khai báo DOCTYPE không đúng chuẩn - sửa lại thành `<!DOCTYPE html>`
+- Lỗi 2: Dòng 4 - `<title>` không đóng thẻ - bổ sung thẻ đóng ```<title>Trang web</title>```
+- Lỗi 3: Dòng 5 - utf8 viết sai - sửa lại thành ```<meata charset="UTF-8">```
+- Lỗi 4: Dòng 8 - thẻ `<h1>` đóng sai - sửa lại ```<h1>Welcome to ShopTLU</h1>```
+- Lỗi 5: Dòng 12 - link không hợp lệ href="home" - sửa lại href="#home"
+- Lỗi 6: Dòng 12 - thẻ `<h1>` đóng sai - sửa lại ```<a href="#home">Trang chủ</a>```
+- Lỗi 7: Dòng 20 - thẻ `<img>` thuộc tính src thiếu "" và alt - sửa lại ```<img src="iphone.jpg" alt="iphone16pro">```
+- Lỗi 8: Dòng 22 - đóng sai thứ tự các thẻ - ```<p>Giá: <b>25.990.000đ</b></p>```
+- Lỗi 9: Dòng 27 - table thiếu thẻ `<thead>` và `<tbody>` - thêm vào `<thead>` và `<tbody>`
+- Lỗi 10: Dòng 29 - dùng `<td>` cho header - dùng `<th>` cho header của bảng
+- Lỗi 11: Dòng 40 - dùng 2 `<main>` - bỏ thẻ `<main>` thay bằng `<aside>` vì `<aside>` thường được dùng làm thanh bên để chứa danh mục bài viết
+- Lỗi 12: Dòng 45 - không đóng thẻ `<p>` - sửa thành ```<p>Coryright 2026</p>```
+- Lỗi 13: Thiếu `<html lang="vi>`
+- Lỗi 14: Thiếu `<meta view="viewport" content="width=device-width, initial-scale=1.0">`
+- Lỗi 15: Thiếu thẻ đóng `</html>` - thêm thẻ đóng `</html>`
 
 Bài B4 — Phân tích trang web thật
 1. Trang web: thegioididong.com
-- Thẻ <img> ở đầu trang ![screenshot <img>](screenshots/Screenshot_TGDD_img.png)
-- Thẻ <h1> ở đầu trang ![screenshot <header>-<h1>](<screenshots/Screenshot_TGDD header-h1.png>)
-- Thẻ <header> cũng ở phần đầu trang 
-- Thẻ <footer> ở cuối trang ![screenshot <footer>](screenshots/Screenshot_TGDD_footer.png)
+- Thẻ img ở đầu trang ![screenshot <img>](screenshots/Screenshot_TGDD_img.png)
+- Thẻ h1 ở đầu trang ![screenshot <header>-<h1>](<screenshots/Screenshot_TGDD header-h1.png>)
+- Thẻ header cũng ở phần đầu trang 
+- Thẻ footer ở cuối trang ![screenshot <footer>](screenshots/Screenshot_TGDD_footer.png)
 2. 
-- Không tìm thấy <table> được sử dụng trong trang web
+- Không tìm thấy thẻ table được sử dụng trong trang web
 3. 
 ![screenshot <form>](screenshots/Screenshot_TGDD_form.png)
 - action: /timkiem
@@ -107,6 +107,7 @@ Bài B4 — Phân tích trang web thật
 - input types: text
 
 Câu C1
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -193,5 +194,7 @@ Câu C1
     </footer>
 </body>
 </html>
-
+```
+Câu C2
+Quan điểm cho rằng dùng thẻ `<div>` cho mọi thứ là một quan điểm không phù hợp với việc phát triển web ở thời điểm hiện tại, bời vì Việc sử dụng thẻ Semantic HTML sẽ mang lại những giá trị về kỹ thuật mà thẻ `<div>` không làm được. Thứ nhất là về SEO. Các con bot của Google không nhìn thấy giao diện giống như con người, chúng đọc cấu trúc code. Vậy nên khi sử dụng các thẻ như `<header>`,`<main>`,hay `<article>`, chúng ta đang cung cấp cho nó một cấu trúc thiết kế rõ ràng, giúp engine tìm kiếm đó hiểu đâu là nội dung quan trọng. Một website toàn thẻ `<div>` sẽ trở nên mờ nhạt và khó xếp hạng cao về bot không phân biệt được đâu là nội dung chính, đâu là nội dung phụ. Thứ hai là Accessibility. Đối với người khiếm thị sử dụng trình đọc mà hình, Semantic HTML là đóng vai trò là các mốc, cho phép họ truy cập một cách nhanh chóng đến các phần khác nhau của trang web. Nếu chỉ dùng `<div>`, trình đọc màn hình sẻ chỉ thấy một khối văn bản vô nghĩa, gây khó khăn cho người dùng khuyết tật. Một ví dụ cụ thể chứng minh lợi ích của việc sử dụng Semantic HTML là việc sử dụng thẻ `<button>` và thẻ `<div class="btn">`. Thẻ `<button>` mặc định đã hỗ trợ tương tác bằng bàn phím(nhấn enter hoặc space để kích hoạt) và tự động có trạng thái "focus". Nếu dùng `<div>`, bạn sẽ phải viết thêm rât nhiều dòng JavaScript và CSS chỉ để tiastoaj lại những tính năng căn bản mà thẻ `<button>` đã có sẵn. Tuy nhiên thẻ `<div>` vẫn có chỗ đứng riêng. Nó sẽ phù hpowj trong các trường hợp phục vụ mục đích trình bày và bố cục thuần túy mà không mang ý nghĩa về nội dụng. Ví dụ dùng một thẻ `<div class="container">` để căn giữa nội dung hoặc bọc các khối để tạo layout Grid/Flexbox. Trong những trường hợp này `<div>` là lựa chọn đúng đắn vì nó không làm nhiễu cấu trúc ngữ nghĩa của trang web.
 
