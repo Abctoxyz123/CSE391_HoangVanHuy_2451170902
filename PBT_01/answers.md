@@ -35,7 +35,6 @@ Trước khi sửa:
 </div>
 <div class="footer">© 2026 ShopTLU</div>
 
-Web này bị Google đánh giá SEO thấp vì dùng thẻ <div> cho tất cả 
 Website bị Goodle đánh giá SEO thấp vì:
 + sử dụng quá nhiều thẻ div không mang ý nghĩa
 Lỗi semantic:
