@@ -92,6 +92,20 @@ Lỗi 13: Thiếu <html lang="vi>
 Lỗi 14: Thiếu <meta view="viewport" content="width=device-width, initial-scale=1.0">
 Lỗi 15: Thiếu thẻ đóng </html> - thêm thẻ đóng </html>
 
+Bài B4 — Phân tích trang web thật
+1. Trang web: thegioididong.com
+- Thẻ <img> ở đầu trang ![screenshot img](<screenshots/Screenshot TGDD-img.png>)
+- Thẻ <h1> ở đầu trang ![screenshot h1-header](<screenshots/Screenshot_TGDD header-h1.png>)
+- Thẻ <header> cũng ở phần đầu trang 
+- Thẻ <footer> ở cuối trang ![screenshot footer](<Screenshot TGDD-footer.png>)
+2. 
+- Không tìm thấy <table> được sử dụng trong trang web
+3. 
+![screenshot form](<screenshots/Screenshot TGDD-form.png>)
+- action: /timkiem
+- method: GET (mặc định)
+- input types: text
+
 
 
 
