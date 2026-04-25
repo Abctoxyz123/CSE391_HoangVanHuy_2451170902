@@ -10,3 +10,11 @@ Câu A1
 8. type="search" --> Ô nhpaja gióng text nhưng tối ưu cho tìm kiếm --> Dùng để tìm sản phẩm
 9. type="range" --> Thanh trượt (slider) --> Dùng để lọc giá sản phẩm
 10. type="date" --> Bộ chọn ngày (calender) --> Dùng để chọn ngày giao hàng
+
+Câu A2
+
+- Trường hợp 1 không submit được vì: Có required (bắt buộc nhập) mà user lại để trống
+- Trường hợp 2 không submit được vì: type="email" mà người dùng nhập "abc" thì khi browser kiểm tra định dạng không có "@" thì sẽ báo lỗi
+- Trường hợp 3 không submit được vì: thuộc tính max="10 mà user lại nhập 15, vượt quá max
+- Trường hợp 4 không submit được vì: mẫu yêu cầu có 10 chữ số mà user nhập không đủ 10 chữ số
+- Trường hợp 5 không submit được vì: minlength=8 mà người dùng nhập 3 ký tự, không đủ số ký tự tối thiểu
