@@ -18,3 +18,8 @@ Câu A2
 - Trường hợp 3 không submit được vì: thuộc tính max="10 mà user lại nhập 15, vượt quá max
 - Trường hợp 4 không submit được vì: mẫu yêu cầu có 10 chữ số mà user nhập không đủ 10 chữ số
 - Trường hợp 5 không submit được vì: minlength=8 mà người dùng nhập 3 ký tự, không đủ số ký tự tối thiểu
+
+Câu A3
+1. Vì khi người dùng sử dụng Screen Reader di chuyển vào ô nhập liệu, thiết bị sẽ đọc to nội dung của nhãn của ô đó lên để người dùng biết phải điền thông tin gì vào ô đó.
+2. Dùng khi chúng ta muốn nhóm các câu hỏi hoặc các ô nhập liệu có liện quan mật thiết với nhau để tạo ngữ cảnh rõ ràng.
+3. Nó được dùng khi một phần tử tương tác (như button, link) không có văn bản hiển thị trên màn hình nhưng vẫn cần mô tả chức năng cho người dùng Screen Reader. Tuy nhiên khi đã có `<label>` chúng ta không nên dùng thêm aria-label vì sẽ gây xung đột, screen reader sẽ ưu tiên đọc nhãn thẻ `<label>`. Thêm aria-label có nội dung tương tự sẽ khiến máy đọc lặp đi lặp lại hoặc ghi đè lên nội dung của `<label>`
