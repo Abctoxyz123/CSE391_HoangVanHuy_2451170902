@@ -48,3 +48,11 @@ Câu A4
     + Ảnh sản phẩm iPhone 16: alt="iPhone 16 màu xanh mòng két nhìn từ mặt lưng với cụm camera kép nằm dọc"
     + Ảnh trang trí (decorative): alt=""
     + Ảnh biểu đồ doanh thu Q1/2026: alt="Biểu đồ cột doanh thu Quý 1 năm 2026, cho thấy sự tăng trưởng mạnh mẽ trong tháng 3 với mức đạt đỉnh 2 tỷ VNĐ"
+
+Câu A5
+1. Khi nào dùng thẻ `<img>`
+- khi hình ảnh là một phần không thể tách rời hoặc mang tính chất trang trí cho nội dung xung quanh. Nếu bỏ tấm ảnh này đi, đoạn văn hoặc chức năng đó có thể bị mất đi ý nghĩa hoặc trông rất kỳ cục. Khi dùng thẻ `<img>` ta không cần chú thích hiển thị bằng chữ bên dưới. Thông tin về ảnh đã được giải thích rõ trong đoạn văn ngay trước/sau đó.
+- Ví dụ thực tế: Logo của trang web nằm trên thanh điều hướng (Navbar). Bạn chỉ cần ảnh và alt="Logo công ty", không cần để chú thích "Đây là logo" dưới ảnh đó.
+2. Khi nào dùng `<figure>` và `<figcaption>`
+- khi hình ảnh là một đơn vị nội dung độc lập (Self-contained). Bạn có thể di chuyển khối này đi chỗ khác (ví dụ: chuyển xuống cuối bài hoặc sang một trang phụ lục) mà không làm ảnh hưởng đến dòng chảy của nội dung chính. Khi dùng `<figure>` chúng ta phải có nhãn chú thích `<figcaption>` để mô tả nội dung của ảnh.
+- Ví dụ thực tế: Hình ảnh trong 1 bài báo, phía dưới cần ghi mô tả tổng quát về bức ảnh và nguồn của bức ảnh đó.
