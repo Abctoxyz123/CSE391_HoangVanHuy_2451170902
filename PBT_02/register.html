@@ -27,9 +27,9 @@
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" pattern="^[0-9a-zA-Z_]{3,20}$" placeholder="Chữ cái,số,underscore" title="3-20 ký tự, chỉ gồm chữ, số và dấu gạch dưới">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" minlength="8" pattern="(?=.[A-Z])(?=.[0-9])" placeholder="Ít nhất 8 ký tự, 1 chữ hoa, 1 chữ số">
+                <input type="password" id="password" name="password" minlength="8" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" placeholder="Ít nhất 8 ký tự, 1 chữ hoa, 1 chữ số">
                 <label for="confirm_password">Xác nhận password:</label>
-                <input type="password" id="confirm_password" name="confirm_password" minlength="8" pattern="(?=.[A-Z])(?=.[0-9])" placeholder="Nhập lại mật khẩu">
+                <input type="password" id="confirm_password" name="confirm_password" minlength="8" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" placeholder="Nhập lại mật khẩu">
             </fieldset>
             <fieldset>
                 <legend>Thông tin giao hàng</legend>
