@@ -39,12 +39,12 @@ Câu A4
     + MP4 (.mp4): Phổ biến nhất, hầu như trình duyệt và thiết bị nào cũng hỗ trợ.
     + WebM (.webm): Do Google phát triển, cho chất lượng tốt nhưng dung lượng file rất nhẹ, tối ưu cho web hiện đại.
     + Ogg/Theora (.ogv): Một định dạng mã nguồn mở (hiện nay ít dùng hơn hai loại trên nhưng vẫn được tính là format chuẩn).
-3. Thuộc tính alt trên `<img>`
+3. Thuộc tính alt trên `<img>` và viết alt
 - Công dụng:
-+ Mô tả hình ảnh cho người dùng sử dụng trình đọc màn hình (Screen Reader).
-+ Hiển thị văn bản thay thế nếu ảnh bị lỗi hoặc không tải được.
-+ Giúp SEO Google hiểu nội dung bức ảnh là gì để xếp hạng tìm kiếm.
+    + Mô tả hình ảnh cho người dùng sử dụng trình đọc màn hình (Screen Reader).
+    + Hiển thị văn bản thay thế nếu ảnh bị lỗi hoặc không tải được.
+    + Giúp SEO Google hiểu nội dung bức ảnh là gì để xếp hạng tìm kiếm.
 - Viết alt cho 3 trường hợp cụ thể:
-+ Ảnh sản phẩm iPhone 16: alt="iPhone 16 màu xanh mòng két nhìn từ mặt lưng với cụm camera kép nằm dọc"
-+ Ảnh trang trí (decorative): alt=""
-+ Ảnh biểu đồ doanh thu Q1/2026: alt="Biểu đồ cột doanh thu Quý 1 năm 2026, cho thấy sự tăng trưởng mạnh mẽ trong tháng 3 với mức đạt đỉnh 2 tỷ VNĐ"
+    + Ảnh sản phẩm iPhone 16: alt="iPhone 16 màu xanh mòng két nhìn từ mặt lưng với cụm camera kép nằm dọc"
+    + Ảnh trang trí (decorative): alt=""
+    + Ảnh biểu đồ doanh thu Q1/2026: alt="Biểu đồ cột doanh thu Quý 1 năm 2026, cho thấy sự tăng trưởng mạnh mẽ trong tháng 3 với mức đạt đỉnh 2 tỷ VNĐ"
