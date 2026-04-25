@@ -23,3 +23,28 @@ Câu A3
 1. Vì khi người dùng sử dụng Screen Reader di chuyển vào ô nhập liệu, thiết bị sẽ đọc to nội dung của nhãn của ô đó lên để người dùng biết phải điền thông tin gì vào ô đó.
 2. Dùng khi chúng ta muốn nhóm các câu hỏi hoặc các ô nhập liệu có liện quan mật thiết với nhau để tạo ngữ cảnh rõ ràng.
 3. Nó được dùng khi một phần tử tương tác (như button, link) không có văn bản hiển thị trên màn hình nhưng vẫn cần mô tả chức năng cho người dùng Screen Reader. Tuy nhiên khi đã có `<label>` chúng ta không nên dùng thêm aria-label vì sẽ gây xung đột, screen reader sẽ ưu tiên đọc nhãn thẻ `<label>`. Thêm aria-label có nội dung tương tự sẽ khiến máy đọc lặp đi lặp lại hoặc ghi đè lên nội dung của `<label>`
+
+Câu A4
+1. Thuộc tính loading="lazy" trên thẻ `<img>`
+- loading="lazy" là kĩ thuật thay vì tải tất cả hình ảnh ngay khi vừa mở trang web, trình duyệt sẽ trì hoãn việc tải những ảnh ở xa (nằm dưới cùng trang) cho đến khi người dùng cuộn chuột đến gần vị trí của chúng. 
+- Nó cải thiện điều gì:
+    + Tốc độ tải trang: Giúp nội dung chính hiện ra nhanh hơn vì trình duyệt không phải "gồng mình" tải hàng chục cái ảnh cùng lúc.
+    + Tiết kiệm dữ liệu: Cực kỳ hữu ích cho người dùng 4G/5G vì họ không phải tốn dung lượng cho những tấm ảnh mà họ chưa kịp xem tới.
+    + Giảm tải máy chủ: Server chỉ phải gửi dữ liệu khi thực sự cần thiết.
+- Khi nào không nên dùng:
+    + Không dùng cho những ảnh phần đầu trang web hiện ra ngay khi vừa load. Ví dụ nếu bạn lazy load ảnh banner chính (hero image), nó sẽ gây ra hiện tượng giật hoặc trắng màn hình trong tích tắc, làm giảm trải nghiệm người dùng.
+2. Tại sao nên cung cấp nhiều `<source>` trong thẻ `<video>`?
+-  Lý do: Để đảm bảo khả năng tương thích trên mọi trình duyệt. Mỗi trình duyệt (Chrome, Safari, Firefox) lại hỗ trợ các định dạng video (codec) khác nhau. Khi bạn cung cấp nhiều `<source>`, trình duyệt sẽ kiểm tra từ trên xuống dưới và phát định dạng đầu tiên mà nó hỗ trợ.
+- 3 format video web phổ biến:
+    + MP4 (.mp4): Phổ biến nhất, hầu như trình duyệt và thiết bị nào cũng hỗ trợ.
+    + WebM (.webm): Do Google phát triển, cho chất lượng tốt nhưng dung lượng file rất nhẹ, tối ưu cho web hiện đại.
+    + Ogg/Theora (.ogv): Một định dạng mã nguồn mở (hiện nay ít dùng hơn hai loại trên nhưng vẫn được tính là format chuẩn).
+3. Thuộc tính alt trên `<img>`
+- Công dụng:
++ Mô tả hình ảnh cho người dùng sử dụng trình đọc màn hình (Screen Reader).
++ Hiển thị văn bản thay thế nếu ảnh bị lỗi hoặc không tải được.
++ Giúp SEO Google hiểu nội dung bức ảnh là gì để xếp hạng tìm kiếm.
+- Viết alt cho 3 trường hợp cụ thể:
++ Ảnh sản phẩm iPhone 16: alt="iPhone 16 màu xanh mòng két nhìn từ mặt lưng với cụm camera kép nằm dọc"
++ Ảnh trang trí (decorative): alt=""
++ Ảnh biểu đồ doanh thu Q1/2026: alt="Biểu đồ cột doanh thu Quý 1 năm 2026, cho thấy sự tăng trưởng mạnh mẽ trong tháng 3 với mức đạt đỉnh 2 tỷ VNĐ"
