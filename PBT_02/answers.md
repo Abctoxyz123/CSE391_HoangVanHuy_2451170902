@@ -51,8 +51,15 @@ Câu A4
 
 Câu A5
 1. Khi nào dùng thẻ `<img>`
-- khi hình ảnh là một phần không thể tách rời hoặc mang tính chất trang trí cho nội dung xung quanh. Nếu bỏ tấm ảnh này đi, đoạn văn hoặc chức năng đó có thể bị mất đi ý nghĩa hoặc trông rất kỳ cục. Khi dùng thẻ `<img>` ta không cần chú thích hiển thị bằng chữ bên dưới. Thông tin về ảnh đã được giải thích rõ trong đoạn văn ngay trước/sau đó.
-- Ví dụ thực tế: Logo của trang web nằm trên thanh điều hướng (Navbar). Bạn chỉ cần ảnh và alt="Logo công ty", không cần để chú thích "Đây là logo" dưới ảnh đó.
+    - khi hình ảnh là một phần không thể tách rời hoặc mang tính chất trang trí cho nội dung xung quanh. Nếu bỏ tấm ảnh này đi, đoạn văn hoặc chức năng đó có thể bị mất đi ý nghĩa hoặc trông rất kỳ cục. Khi dùng thẻ `<img>` ta không cần chú thích hiển thị bằng chữ bên dưới. Thông tin về ảnh đã được giải thích rõ trong đoạn văn ngay trước/sau đó.
+    - Ví dụ thực tế: Logo của trang web nằm trên thanh điều hướng (Navbar). Bạn chỉ cần ảnh và alt="Logo công ty", không cần để chú thích "Đây là logo" dưới ảnh đó.
 2. Khi nào dùng `<figure>` và `<figcaption>`
-- khi hình ảnh là một đơn vị nội dung độc lập (Self-contained). Bạn có thể di chuyển khối này đi chỗ khác (ví dụ: chuyển xuống cuối bài hoặc sang một trang phụ lục) mà không làm ảnh hưởng đến dòng chảy của nội dung chính. Khi dùng `<figure>` chúng ta phải có nhãn chú thích `<figcaption>` để mô tả nội dung của ảnh.
-- Ví dụ thực tế: Hình ảnh trong 1 bài báo, phía dưới cần ghi mô tả tổng quát về bức ảnh và nguồn của bức ảnh đó.
+    - khi hình ảnh là một đơn vị nội dung độc lập (Self-contained). Bạn có thể di chuyển khối này đi chỗ khác (ví dụ: chuyển xuống cuối bài hoặc sang một trang phụ lục) mà không làm ảnh hưởng đến dòng chảy của nội dung chính. Khi dùng `<figure>` chúng ta phải có nhãn chú thích `<figcaption>` để mô tả nội dung của ảnh.
+    - Ví dụ thực tế: Hình ảnh trong 1 bài báo, phía dưới cần ghi mô tả tổng quát về bức ảnh và nguồn của bức ảnh đó.
+
+
+Bài B1
+- Giải thích vì sao HTML không thể validate confirm_password
+    1. Phạm vi kiểm tra bị cô lập. Các thuộc tính validation của HTML như required, parttern,... chỉ có thể kiểm tra giá trị bên trong chính nó.
+    2. Thiếu logic so sánh. HTML không có bộ xử lý để thực hiện các phép tính logic hoặc so sánh giữa các biến. Để làm được điều này, trình duyệt cần một thực thể có khả năng "đọc" giá trị từ hai nơi và "đối chiếu" chúng — đó chính là vai trò của JavaScript.
+
