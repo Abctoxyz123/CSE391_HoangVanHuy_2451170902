@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+    <section>
+        <h2>1. Giỏ hàng</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>iPhone 16 Pro Max</td>
+                    <td>25.990.000đ</td>
+                    <td align="middle">1</td>
+                    <td>25.990.000đ</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Samsung S26 Ultra</td>
+                    <td>29.990.000đ</td>
+                    <td align="middle">1</td>
+                    <td>29.990.000đ</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ốp lưng MagSafe</td>
+                    <td>1.200.000đ</td>
+                    <td align="middle">1</td>
+                    <td>1.200.000đ</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Tổng cộng:</td>
+                        <td>57.180.000đ</td>
+                    </tr>
+                </tfoot>
+            </tbody>
+        </table>
+    </section>
+    <hr>
+    <section>
+        <form action="#">
+            <fieldset>
+                <legend>2. Thanh toán</legend>
+                <label>Phương thức thanh toán:</label><br>
+                <input type="radio">
+                <label for="cod">COD</label>
+                <input type="radio">
+                <label for="bank tranfer">Chuyển khoản</label>
+                <input type="radio">
+                <label for="e-wallet">Ví điện tử</label><br>
+                <label for="vouncher">Mã giảm giá:</label>
+                <input type="text" pattern="SALE\d{4}" placeholder="vd: SALE2026"><br>
+                <label for="note">Ghi chú:</label><br>
+                <textarea name="note" id="note" placeholder="Lưu ý cho người bán hàng (không bắt buộc)"></textarea>
+                
+            </fieldset>
+            
+            <fieldset>
+                <legend>3. Thông tin giao hàng</legend>
+                <label for="delivery-date">Ngày giao hàng mong muốn:</label>
+                <input type="date" min="2026-04-28" required><br>
+                <label for="time">Khung giờ nhận hàng:</label>
+                <select name="time" id="time">
+                    <option value="8-12">Sáng 8-12h</option>
+                    <option value="14-18">Chiều 14-18h</option>
+                    <option value="18-21">Tối 18-21h</option>
+                </select>
+                <br>
+                <label for="date-max">Thời gian giao hàng dự kiến (1-7 ngày):</label>
+                <input type="range" min="1" max="7" step="1" value="3">
+            </fieldset>
+            <button type="submit" aria-label="Xác nhận đặt hàng">XÁC NHẬN ĐẶT HÀNG</button>
+        </form>
+    </section>
+</body>
+</html>
