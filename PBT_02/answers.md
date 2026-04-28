@@ -63,3 +63,25 @@ Bài B1
     1. Phạm vi kiểm tra bị cô lập. Các thuộc tính validation của HTML như required, parttern,... chỉ có thể kiểm tra giá trị bên trong chính nó.
     2. Thiếu logic so sánh. HTML không có bộ xử lý để thực hiện các phép tính logic hoặc so sánh giữa các biến. Để làm được điều này, trình duyệt cần một thực thể có khả năng "đọc" giá trị từ hai nơi và "đối chiếu" chúng — đó chính là vai trò của JavaScript.
 
+Câu C1
+- Lỗi 1: Dòng 2 - Input "Tên" không có `<label for="">`, vi phạm accessibility
+Sửa: `<label for="name">Tên</label> <input type="text" id="name" name="name" required>`
+- Lỗi 2: Dòng 4 - Input "Email" thiếu `<label>`, vi phạm accessibility
+Sửa: `<label for="email">Email</label> <input type="email" id="email" name="email" required>`
+- Lỗi 3: Dòng 6 - Input "Mật khẩu" thiếu `<label>`, vi phạm accessibility
+Sửa: `<label for="password">Mật khẩu</label> <input type="text" id="password" name="password" required>`
+- Lỗi 4: Dòng 7 - Input "Nhập lại mật khẩu" thiếu `<label>`, vi phạm accessibility
+Sửa: `<label for="confirm_password">Nhập lại mật khẩu</label> <input type="text" id="confirm_password" name="confirm_password" required>`
+- Lỗi 5: Dòng 9 - Input "Phone" thiếu `<label>`, vi phạm accessibility
+Sửa: `<label for="phone">Phone:</label> <input type="tel" id="phone" name="phone" value="0901234567">`
+- Lỗi 6: Dòng 11 - select không có `<label>` đi kèm, thiếu name và id, vi phạm accessibility
+Sửa: `<label for="city">Thành phố:</label> <select id="city" name="city">`
+- Lỗi 7: Dòng 12,13 - option thiếu thuộc tính value, vi phạm best practices
+Sửa: 
+```html
+<option value="hanoi">Hà Nội</option>
+<option value="hcm">TP.HCM</option>
+```
+- Lỗi 8: 16,17,18 - khối "Tôi đồng ý điều khoản" chỉ có `<label>` mà không có thẻ `<input type="checkbox">`, vi phạm logic form và validation
+Sửa: `<input type="checkbox" id="terms" name="terms" required> <label for="terms">Tôi đồng ý điều khoản</label>`
+
