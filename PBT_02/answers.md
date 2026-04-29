@@ -86,7 +86,7 @@ Sửa:
 Sửa: `<input type="checkbox" id="terms" name="terms" required> <label for="terms">Tôi đồng ý điều khoản</label>`
 
 Câu C2
-
+1. Viết pattern regex cho CMND/CCCD và Số tài khoản
 ```html
 <form action="">
     <label for="id">CMND/CCCD:</label>
