@@ -122,30 +122,30 @@ HTML5 validation:
 
 3. 3 loại validation HTML5 KHÔNG làm được (phải dùng JS)
 
-1. Logic phức tạp giữa nhiều field
+    1. Logic phức tạp giữa nhiều field
 
-Ví dụ:
+        Ví dụ:
 
-- Xác nhận mật khẩu trùng nhau
-- Ngày bắt đầu < ngày kết thúc
+        - Xác nhận mật khẩu trùng nhau
+        - Ngày bắt đầu < ngày kết thúc
 
-=> HTML không so sánh giữa các input
-2. Validate theo business rule
+        => HTML không so sánh giữa các input
+    2. Validate theo business rule
 
-Ví dụ:
+        Ví dụ:
 
-- CCCD có tồn tại trong DB không
-- Số tài khoản đã được đăng ký chưa
+        - CCCD có tồn tại trong DB không
+        - Số tài khoản đã được đăng ký chưa
 
-=> Cần gọi API → HTML không làm được
-3. Validation theo ngữ cảnh động
+        => Cần gọi API → HTML không làm được
+    3. Validation theo ngữ cảnh động
 
-Ví dụ:
+        Ví dụ:
 
-- Email phải thuộc domain công ty
-- PIN không được trùng 123456 hoặc ngày sinh
+        - Email phải thuộc domain công ty
+        - PIN không được trùng 123456 hoặc ngày sinh
 
-=> HTML không có logic xử lý nâng cao
+        => HTML không có logic xử lý nâng cao
 4. 2 rủi ro nếu chỉ validate frontend
 
 Rủi ro 1: Bypass → dữ liệu rác / gian lận
