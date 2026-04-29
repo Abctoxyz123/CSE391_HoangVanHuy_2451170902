@@ -85,3 +85,85 @@ Sửa:
 - Lỗi 8: 16,17,18 - khối "Tôi đồng ý điều khoản" chỉ có `<label>` mà không có thẻ `<input type="checkbox">`, vi phạm logic form và validation
 Sửa: `<input type="checkbox" id="terms" name="terms" required> <label for="terms">Tôi đồng ý điều khoản</label>`
 
+Câu C2
+
+```html
+<form action="">
+    <label for="id">CMND/CCCD:</label>
+    <input type="text" pattern="^\d{12}$" required>
+    <label for="acc number">Số tài khoản:</label>
+    <input type="text" pattern="^\d{10,15}$" required>
+    <label for="email">Email:</label>
+    <input type="email" pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$">
+    <label for="pin">PIN:</label>
+    <input type="password" pattern="^\d{6}$" required>
+    <button type="submit">Đăng ký</button>
+</form>
+```
+2. HTML5 validation có đủ an toàn cho ngân hàng không?
+
+Không.
+
+Vì sao?
+
+HTML5 validation:
+
+- Chạy ở client (trình duyệt)
+- Người dùng có thể:
+    + Tắt validation (novalidate)
+    + Sửa HTML bằng DevTools
+    + Gửi request trực tiếp bằng Postman/cURL
+
+=> Tức là: dễ bypass hoàn toàn
+
+- Kết luận:
+    + HTML5 validation = trải nghiệm người dùng (UX)
+    + KHÔNG phải bảo mật
+
+3. 3 loại validation HTML5 KHÔNG làm được (phải dùng JS)
+
+1. Logic phức tạp giữa nhiều field
+
+Ví dụ:
+
+- Xác nhận mật khẩu trùng nhau
+- Ngày bắt đầu < ngày kết thúc
+
+=> HTML không so sánh giữa các input
+2. Validate theo business rule
+
+Ví dụ:
+
+- CCCD có tồn tại trong DB không
+- Số tài khoản đã được đăng ký chưa
+
+=> Cần gọi API → HTML không làm được
+3. Validation theo ngữ cảnh động
+
+Ví dụ:
+
+- Email phải thuộc domain công ty
+- PIN không được trùng 123456 hoặc ngày sinh
+
+=> HTML không có logic xử lý nâng cao
+4. 2 rủi ro nếu chỉ validate frontend
+
+Rủi ro 1: Bypass → dữ liệu rác / gian lận
+
+Người dùng có thể gửi:
+
+- CCCD = abc
+- Số tài khoản = 1
+
+=> Hệ thống vẫn nhận nếu backend không check
+
+Rủi ro 2: Tấn công bảo mật (nguy hiểm hơn)
+
+Ví dụ:
+
+- SQL Injection
+- XSS
+
+=> Nếu backend không validate:
+- Có thể bị hack DB
+- Đánh cắp thông tin người dùng
