@@ -62,3 +62,39 @@ Câu A1
     + Gần như trong mọi dự án web thực tế, đặc biệt là các trang web có nhiều trang con hoặc khi làm việc nhóm.
 - Câu hỏi thêm: Cách nào "thắng"?
 Nếu cùng 1 element (phần tử) có cả 3 cách CSS đồng thời áp dụng, thì Inline CSS sẽ "thắng" (được áp dụng cuối cùng).
+
+Câu A2
+1. h1
+→ Chọn tất cả thẻ `<h1>`
+- ShopTLU
+2. .price
+→ Chọn tất cả phần tử có class price
+- 25.990.000đ
+- 45.990.000đ
+3. #app header
+→ Chọn `<header>` nằm trong phần tử có id="app"
+- Toàn bộ header chứa:
+    + ShopTLU
+    + Home
+    + Product
+    + About
+4. .nav a:first-child
+→ Không có class nav trong HTML yêu cầu
+- Không chọn được gì
+5. .product.featured h2
+→ Chọn `<h2>` nằm trong phần tử có 2 class: product và featured
+Macbook Pro
+6. article > p
+→ Chọn thẻ `<p>` là con của `<article>`
+- 25.990.000đ
+- Mô tả sản phẩm...
+- 45.990.000đ
+- Mô tả sản phẩm...
+7. a[href^="/]
+→ Chọn `<a>` có href bắt đầu bằng "/"
+- Home
+- Products
+- About
+8. .top-bar.dark h1
+→ Chọn `<h1>` trong phần tử có 2 class: top-bar và dark
+- ShopTLU
