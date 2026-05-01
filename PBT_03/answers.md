@@ -98,3 +98,38 @@ Macbook Pro
 8. .top-bar.dark h1
 → Chọn `<h1>` trong phần tử có 2 class: top-bar và dark
 - ShopTLU
+
+Câu A3
+
+```css
+/* Trường hợp 1: content-box (mặc định) */
+.box-1 {
+    width: 400px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+}
+→ Chiều rộng hiển thị = 450px
+→ Không gian chiếm trên trang = 470px
+
+/* Trường hợp 2: border-box */
+.box-2 {
+    box-sizing: border-box;
+    width: 400px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+}
+→ Chiều rộng hiển thị = 400px
+→ Kích thước content thực tế = 350px
+→ Không gian chiếm trên trang = 420px
+
+/* Trường hợp 3: Margin collapse */
+.box-a { margin-bottom: 25px; }
+.box-b { margin-top: 40px; }
+→ Khoảng cách giữa box-a và box-b = 40px
+→ Giải thích tại sao KHÔNG PHẢI 65px
+→ Đây là hiện tượng Margin Collapsing. Trong CSS, khi hai margin dọc (trên và dưới) của các phần tử nằm cạnh nhau (block-level elements) chạm vào nhau, chúng sẽ không cộng dồn. Thay vào đó, trình duyệt sẽ lấy giá trị lớn nhất trong các margin đó làm khoảng cách thực tế.
+```
+
+**Nâng cao:** Nếu `.box-a` có `margin-bottom: -10px` và `.box-b` có `margin-top: 40px`, khoảng cách = 30px
