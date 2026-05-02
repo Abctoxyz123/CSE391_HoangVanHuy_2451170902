@@ -133,3 +133,14 @@ Câu A3
 ```
 
 **Nâng cao:** Nếu `.box-a` có `margin-bottom: -10px` và `.box-b` có `margin-top: 40px`, khoảng cách = 30px
+
+Bài B2
+
+- Hộp 1 (content-box): chiều rộng thực tế = 350 px (đo từ DevTools)
+- Hộp 2 (border-box): chiều rộng thực tế = 300 px (đo từ DevTools)
+- Giải thích sự khác biệt:
+    + Hộp 1 (content-box): Chiều rộng thực tế sẽ là:
+    300px(width)+20px∗2(padding)+5px∗2(border)=350px.
+    Lý do: Với content-box, thuộc tính width chỉ áp dụng cho nội dung bên trong. Padding và Border được cộng thêm vào bên ngoài, làm hộp phình to ra.
+    + Hộp 2 (border-box): Chiều rộng thực tế sẽ là:300px.
+    Lý do: Với border-box, width bao gồm luôn cả nội dung, padding và border. Khi bạn tăng padding, trình duyệt sẽ tự động co phần nội dung lại để giữ nguyên tổng kích thước là 300px.
