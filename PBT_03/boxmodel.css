@@ -9,3 +9,31 @@
     padding: 20px;
     border: 5px solid;
 }
+
+.container{
+    width: 1000px;
+}
+
+.col{
+    float: left;
+}
+
+.sidebar{
+    box-sizing: border-box;
+    width: 250px;
+    padding: 15px;
+    background-color: aquamarine;
+}
+
+.content{
+    box-sizing: border-box;
+    width: 500px;
+    padding: 20px;
+}
+
+.ads{
+    box-sizing: border-box;
+    width: 250px;
+    padding: 15px;
+    background-color: rgb(122, 224, 224);
+}
