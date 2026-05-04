@@ -142,7 +142,7 @@ Bài B2
     + Hộp 1 (content-box): Chiều rộng thực tế sẽ là:
     300px(width)+20px∗2(padding)+5px∗2(border)=350px.
     Lý do: Với content-box, thuộc tính width chỉ áp dụng cho nội dung bên trong. Padding và Border được cộng thêm vào bên ngoài, làm hộp phình to ra.
-    + Hộp 2 (border-box): Chiều rộng thực tế sẽ là:300px.
+    + Hộp 2 (border-box): Chiều rộng thực tế sẽ là: 300px.
     Lý do: Với border-box, width bao gồm luôn cả nội dung, padding và border. Khi bạn tăng padding, trình duyệt sẽ tự động co phần nội dung lại để giữ nguyên tổng kích thước là 300px.
 
 Bài B3
@@ -159,3 +159,14 @@ Bài B3
 
 - Element cuối cùng hiển thị màu đen vì inline style có độ ưu tiên cao nhất (1,0,0,0) so với các Selector (ID,Class,Type), do đó nó sẽ ghi đè lên tất cả các rule được viết trong file CSS bên ngoài hoặc thẻ `<style>`
 - Thay đổi thứ tự rules trong CSS file không làm thay đổi kết quả vì cơ chế của CSS dựa trên Specificity chứ không phải thứ tự khai báo(ngoại trừ trường hợp các selector có cùng độ ưu tiên).
+
+
+Câu C1
+1. Tính chiều rộng thực tế của sidebar và content (content-box!)
+- Chiều rộng thực tế của sidebar = 300px + 20px + 20px + 1px + 1px = 342px
+- Chiều rộng thực tế của content = 660px + 30px + 30px + 1px + 1px = 722px
+2. Giải thích tại sao layout bị vỡ
+- Layout bị vỡ vì tổng chiều rộng của sidebar và content lớn hơn chiều rộng của container
+3. Đưa ra 2 cách sửa khác nhau (1 cách dùng border-box, 1 cách không dùng)
+- Cách 1: sử dụng property (box-sizing: bored-box) cho class sidebar và content
+- Cách 2: Tính toán lại các giá trị padding và border từ width gốc để tổng không vượt quá 960px.
