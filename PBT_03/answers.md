@@ -170,3 +170,22 @@ Câu C1
 3. Đưa ra 2 cách sửa khác nhau (1 cách dùng border-box, 1 cách không dùng)
 - Cách 1: sử dụng property (box-sizing: bored-box) cho class sidebar và content
 - Cách 2: Tính toán lại các giá trị padding và border từ width gốc để tổng không vượt quá 960px.
+
+Câu C2
+1. "Sản phẩm A" (h2) có font-size = 20px và color = green
+    - Thẻ h2 này được kế thừa từ .container có font-size: 14px nhưng lại chịu tác động từ .card .title nên font-size của nó là 20px
+    - Có 2 quy tắc tác động vào thẻ này để set màu:
+        1. #featured .title { color: red; }
+        2. .highlight { color: green !important; }
+    - quy tắc 2 có !important nên màu được hiển thị là green
+2. "Mô tả sản phẩm" (p trong card featured) có color = blue
+    - có quy tắc .card p { color: inherit; } áp dụng trực tiếp lên thẻ p này. Từ khóa inherit (kế thừa) buộc trình duyệt phớt lờ các giá trị mặc định và đi tìm màu của phần tử cha trực tiếp chứa nó.
+    - Cha của nó là thẻ `<div class="card" id="featured">`. Phần tử cha này đang được áp dụng quy tắc .card { color: blue; }. Vì vậy, thẻ p "vay mượn" màu xanh dương này từ cha của mình.
+3. "Sản phẩm B" (h2) có font-size = 20px và color = blue
+    - Có selector .card .title tác động vào thẻ này nên font-size sẽ là value của selector này.
+    - Thẻ h2 kế thừa từ thẻ cha `<div class="card">`. Thẻ cha này đang có color: blue;. Do đó, thẻ h2 tự động kế thừa màu xanh dương.
+4. "Mô tả sản phẩm B" (p.highlight) có color = green
+    - có 2 quy tắc cùng lúc tác động lên thẻ p này
+        1. .card p{color: inherit} (Specificity: 0-1-1)
+        2. .highlight{color: green !important;} (Specificity: 0-1-0)
+    - có !important nên quy tắc 2 sẽ có ưu tiên cao nhất và màu sẽ được hiển thị theo quy tắc số hai
