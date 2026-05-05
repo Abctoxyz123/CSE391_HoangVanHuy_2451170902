@@ -148,14 +148,14 @@ Bài B2
 Bài B3
 1. p    (0,0,1)
 2. .text    (0,1,0)
-3. .text.highlight  (0,2,0)
-4. p.text   (0,1,1)
+3. p.text   (0,1,1)
+4. .text.highlight  (0,2,0)
 5. p.text.highlight (0,2,1)
 6. #demo    (1,0,0)
 7. #demo.text   (1,1,0)
 8. #demo.text.highlight (1,2,0)
 9. p#demo.text.highlight    (1,2,1)
-10. `<p .... style="black">Hello World</p>` (1,0,0,0)
+10. `p{color: black !important;}` 
 
 - Element cuối cùng hiển thị màu đen vì inline style có độ ưu tiên cao nhất (1,0,0,0) so với các Selector (ID,Class,Type), do đó nó sẽ ghi đè lên tất cả các rule được viết trong file CSS bên ngoài hoặc thẻ `<style>`
 - Thay đổi thứ tự rules trong CSS file không làm thay đổi kết quả vì cơ chế của CSS dựa trên Specificity chứ không phải thứ tự khai báo(ngoại trừ trường hợp các selector có cùng độ ưu tiên).

@@ -1,0 +1,42 @@
+p{
+    color: red;
+}
+
+.text{
+    color: blue;
+}
+
+p.text{
+    color: yellow;
+}
+
+.text.highlight{
+    color: green;
+}
+
+p.text.highlight{
+    color: aqua;
+}
+
+#demo{
+    color: brown;
+}
+
+p#demo{
+    color: purple;
+}
+
+#demo.text{
+    color: gray;
+}
+
+#demo.text.highlight{
+    color: orange;
+}
+
+
+
+
+
+
+
