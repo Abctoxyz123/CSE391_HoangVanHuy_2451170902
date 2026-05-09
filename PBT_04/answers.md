@@ -1,4 +1,4 @@
-Câu 1
+Câu A1
 
 | Position | Vẫn chiếm chỗ trong flow? | Tham chiếu vị trí | Cuộn theo trang? | Use case |
 |----------|---------------------------|-------------------|------------------|----------|
@@ -19,7 +19,7 @@ Câu 1
 
     + Positioned: Là bất kỳ phần tử nào có thuộc tính position được gán giá trị khác static (như relative, absolute, fixed, hoặc sticky).
 
-Câu 2
+Câu A2
 
 Trường hợp 1:
 ```
