@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.fixed-header{
+    height: 60px;
+    background-color: rgb(209, 164, 105);
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo img{
+    height:60px;
+    border-radius: 50%;
+}
+.fixed-header-nav ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding-right: 20px;
+}
+.fixed-header-nav{
+    align-content: center;
+}
+
+.sidebar{
+    background-color: bisque;
+    position: sticky;
+    top: 80px;
+    width: 250px;
+}
+.sidebar-nav{
+    color: black;
+    margin: 0;
+}
+.sidebar-nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar-nav li{
+    padding: 3px;
+}
+
+
+.product-card {
+    width: 250px;
+    height: 250px;
+    background: rgb(204, 195, 74);
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    top: 80px;
+    left: 250px;
+}
+
+.badge-hot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.scroll-top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+}
