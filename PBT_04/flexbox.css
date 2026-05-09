@@ -1,0 +1,68 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 15px 40px;
+    margin-bottom: 40px;
+}
+.navbar-ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+.navbar-ul a{
+    text-decoration: none;
+}
+.navbar .logo{
+    height: fit-content;
+}
+.navbar .logo img{
+    height: 60px;
+    width: 60px;
+}
+.navbar-ul a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.account{
+    display: flex;
+    gap: 15px;
+}
+.account a{
+    text-decoration: none;
+}
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card{
+    flex: 0 0 calc(25%-20px);
+    background-color: bisque;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.card img{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.card-info{
+    margin-bottom: 10px;
+}
+.btn-buy{
+    margin-top: auto;
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
