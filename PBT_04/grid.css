@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+}
+.header{
+    height: 100px;
+    background-color: antiquewhite;
+}
+.hero{
+    height: 100px;
+    background-color: rgb(185, 194, 59);
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    background-color: orange;
+}
+.sidebar{
+    background-color: aquamarine;
+}
+.sidebar label{
+    display: block;
+    margin: 5px;
+}
+.product-grid{
+    background-color: beige;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.ads{
+    background-color: rgb(47, 202, 202);
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+.footer{
+    height: 100px;
+    background-color: rgb(218, 86, 86);
+}
+.header, .hero, .footer{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
