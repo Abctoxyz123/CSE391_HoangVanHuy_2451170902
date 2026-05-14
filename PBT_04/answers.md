@@ -1,3 +1,5 @@
+PHẦN A
+
 Câu A1
 
 | Position | Vẫn chiếm chỗ trong flow? | Tham chiếu vị trí | Cuộn theo trang? | Use case |
@@ -83,3 +85,86 @@ _________________________________________
 |  -------                              |
 _________________________________________
 ```
+
+PHẦN C
+
+Câu C1
+
+1. Navigation bar ngang (logo + menu + buttons)
+- Lựa chọn: Flexbox
+- Giải thích: Thanh điều hướng là kiểu bố cục một chiều (theo trục ngang). Flexbox cho phép bạn dễ dàng phân bổ không gian giữa các phần tử bằng justify-content: space-between và căn chỉnh tất cả các mục thẳng hàng theo chiều dọc bằng align-items: center.
+2. Lưới ảnh Instagram (3 cột đều nhau, số ảnh không biết trước)
+- Lựa chọn: Grid.
+- Giải thích: Đây là bố cục hai chiều chuẩn (cả hàng và cột). Với Grid, bạn chỉ cần thiết lập grid-template-columns: repeat(3, 1fr) một lần; khi có thêm ảnh mới, chúng sẽ tự động rơi xuống hàng dưới mà vẫn giữ đúng kích thước và khoảng cách cột.
+3. Layout blog: main content + sidebar
+- Lựa chọn: Grid
+- Giải thích: Đây là việc xây dựng "khung xương" lớn (macro layout) cho trang web. Grid giúp bạn kiểm soát tỷ lệ giữa nội dung chính và thanh bên một cách chính xác (ví dụ: grid-template-columns: 3fr 1fr) và rất tiện lợi khi cần thay đổi vị trí của chúng trên thiết bị di động.
+4. Footer với 4 cột thông tin
+- Lựa chọn: Kết hợp cả 2
+- Giải thích:
+    + Sử dụng Grid để chia khung tổng của Footer thành 4 phần bằng nhau một cách nhanh gọn.
+    + Sử dụng Flexbox bên trong từng cột để sắp xếp các danh sách liên kết hoặc icon theo chiều dọc/ngang và căn chỉnh chúng chính xác.
+5. Card sản phẩm (ảnh trên, text giữa, nút dưới — nút luôn dính đáy)
+- Lựa chọn: Flexbox
+- Giải thích: Card là bố cục một chiều theo chiều dọc. Bằng cách sử dụng display: flex với flex-direction: column, bạn có thể áp dụng margin-top: auto cho nút bấm. Kỹ thuật này sẽ đẩy nút xuống sát đáy card bất kể phần văn bản ở giữa dài hay ngắn, tạo sự đồng nhất cho cả hàng sản phẩm.
+
+Câu C2
+
+Lỗi 1: Card không đều chiều cao - nút "mua" bị nhảy xuống
+- Nguyên nhân: Mặc định các thẻ .card có chiều cao phụ thuộc vào nội dung bên trong(text dài hay ngắn). Nếu card 1 có tiêu đề 1 dòng và card 2 có tiêu đề 2 dòng, nút bấm sẽ bị lệch nhau.
+- Cách sửa: Biến mỗi .card thành một flex container theo chiều dọc và sử dụng margin-top: auto cho nút bấm để đẩy nó xuống đáy.
+```css
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    margin: 1.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .btn {
+    padding: 10px;
+    margin-top: auto; 
+}
+```
+
+Lỗi 2: Items không nằm giữa cả ngang lẫn dọc trong container 100vh
+- Nguyên nhân: Thuộc tính text-align: center chỉ có tác dụng căn giữa văn bản theo chiều ngang. Trong Flexbox, để căn giữa một item theo cả hai chiều trong cha, bạn cần sử dụng các thuộc tính căn chỉnh của chính Flexbox.
+- Cách sửa: Thêm justify-content và align-items vào container cha.
+```css
+.hero {
+    height: 100vh;
+    display: flex;
+    /* Code sửa */
+    justify-content: center; /* Căn giữa theo chiều ngang (trục chính) */
+    align-items: center;     /* Căn giữa theo chiều dọc (trục phụ) */
+}
+
+.hero-content {
+    text-align: center;
+}
+```
+
+Lỗi 3: Sidebar bị co lại khi content quá dài
+- Nguyên nhân: Mặc định trong Flexbox, thuộc tính flex-shrink có giá trị là 1. Điều này có nghĩa là khi không gian không đủ, các item sẽ tự động bị "bóp" lại để vừa với container. Sidebar dù có width: 250px vẫn bị ép lại bởi phần content chiếm ưu thế.
+- Cách sửa: Thiết lập flex-shrink: 0 cho sidebar để ngăn chặn việc bị co lại.
+```css
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    /* Code sửa: Không cho phép sidebar co lại */
+    flex-shrink: 0; 
+}
+
+.content {
+    flex: 1; /* Chiếm toàn bộ phần còn lại */
+}
+```
+
