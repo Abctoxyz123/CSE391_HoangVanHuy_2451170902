@@ -1,0 +1,108 @@
+/* .container { width: 100%; padding: 10px; }
+
+@media (min-width: 576px) { .container { width: 540px; } }
+@media (min-width: 768px) { .container { width: 720px; } }
+@media (min-width: 992px) { .container { width: 960px; } }
+@media (min-width: 1200px) { .container { width: 1140px; } } */
+
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    display: flex;
+    background-color: red;
+    justify-content: space-between;
+}
+.logo{
+    background-color: aqua;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+}
+.menu{
+    display: block;
+}
+.navbar{
+    background-color: green;
+    display: none;
+}
+ul{
+    display: flex;
+}
+ul li{
+    list-style: none;
+    padding-right: 20px;
+}
+.filter{
+    display: none;
+    background-color: rgb(180, 199, 70);
+}
+.container{
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgb(66, 130, 185);
+    gap: 16px;
+}
+.ads-bar{
+    display: none;
+    background-color: rgb(156, 82, 199);
+}
+.card{
+    background-color: rgb(67, 67, 129);
+}
+.footer{
+    text-align: center;
+    background-color: aquamarine;
+}
+/* tablet: 768px-1023px */
+@media(min-width:768px){
+    .header{
+        display: flex;
+    }
+    .menu{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+    }
+    li{
+        list-style: none;
+    }
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .filter{
+        display: block;
+    }
+    .main-content{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .ads-bar{
+        display: none;
+    }
+}
+
+/* Desktop: >=1024px */
+@media(min-width: 1024px){
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container{
+        grid-template-columns: 220px 1fr 220px;
+    }
+    .main-content{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .ads-bar{
+        display: block;
+    }
+}
