@@ -81,33 +81,60 @@ Câu A2
     Ví dụ layout sản phẩm: 1 cột
 
 2. sm - Mobile lớn
+
     Kích thước: ≥576px
+
     Thiết bị đại điện
     - iPhone PLus
     - điện thoại màn lớn
+
     Ví dụ layout sản phẩm: 2 cột
 
 3. md - Tablet
+
     Kích thước: ≥768px
+
     Thiết bị đại diện
     - iPad
     - tablet Android
+
     Ví dụ layout sản phẩm: 3 cột
 4. lg - Laptop
+
     Kích thước: ≥992px
+
     Thiết bị đại diện
     - laptop
     - desktop nhỏ
+
     Ví dụ layout sản phẩm: 4 cột
 5. xl - Desktop
+
     Kích thước: ≥1200px
+
     Thiết bị đại diện
     - màn hình desktop lớn
     - monitor Full HD
+
     Ví dụ layout sản phẩm: 5 cột
 6. xxl - Màn hình siêu lớn
+
     Kích thước: ≥1400px
+
     Thiết bị đại diện
     - màn hình 2K
     - màn ultrawide
+
     Ví dụ layout sản phẩm: 6 cột
+
+Câu A3
+
+| Chiều rộng màn hình | `.container` width |
+|---------------------|--------------------|
+| 375px (iPhone SE) | 375px |
+| 600px | 540px |
+| 800px | 720px |
+| 1000px | 960px |
+| 1400px | 1140px |
+
+
