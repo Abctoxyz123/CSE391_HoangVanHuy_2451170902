@@ -137,4 +137,152 @@ Câu A3
 | 1000px | 960px |
 | 1400px | 1140px |
 
+Câu A4
 
+1. Variables ($primary-color)
+- ý tưởng: lưu giá trị vào biến để tái sử dụng
+- Ví dụ:
+```css
+$primary-color: #3498db;
+$text-color: white;
+
+.button {
+    background: $primary-color;
+    color: $text-color;
+}
+```
+- Compile ra CSS
+```css
+.button {
+    background: #3498db;
+    color: white;
+}
+```
+2. Nesting (CSS lồng nhau)
+- Ý tưởng: Viết selector theo cấu trúc HTML thật.
+
+Ví dụ:
+```css
+.navbar {
+    background: black;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            color: yellow;
+        }
+    }
+}
+```
+Compile ra CSS
+```css
+.navbar {
+    background: black;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    color: yellow;
+}
+```
+3. Mixins(@mixin, @include)
+- Ý tưởng: Tạo "template CSS" tái sử dụng được. Giống function trong lập trình.
+
+Ví dụ
+```scss
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    @include flex-center;
+    height: 200px;
+}
+```
+
+Compile ra CSS
+```css
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+```
+4. @extend/Inheritance
+- Ý tưởng: Cho class kế thừa CSS từ class khác
+
+Ví dụ
+```scss
+.button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+.success-button {
+    @extend .button;
+    background: green;
+}
+
+.error-button {
+    @extend .button;
+    background: red;
+}
+```
+
+Compile ra CSS
+```css
+.button,
+.success-button,
+.error-button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+.success-button {
+    background: green;
+}
+
+.error-button {
+    background: red;
+}
+```
+
+Giải thích tại sao trình duyệt không đọc được .scss?
+
+Vì: SCSS không phải ngôn ngữ chuẩn mà browser hiểu.
+
+Browser chỉ hiểu:
+- HTML
+- CSS
+- JS
+
+Cần bước gì để chuyển SCSS --> CSS
+
+Cần compile(biên dịch) từ SCSS --> CSS
+
+Các công cụ phổ biến: Live Sass Compiler, Sass CLI, Vite,...
