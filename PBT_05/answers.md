@@ -286,3 +286,15 @@ Cần bước gì để chuyển SCSS --> CSS
 Cần compile(biên dịch) từ SCSS --> CSS
 
 Các công cụ phổ biến: Live Sass Compiler, Sass CLI, Vite,...
+
+Câu C1
+
+- navigation ở 1440px nằm ngang và hiện đầy đủ category: thời sự, kinh doanh, thể thao, giải trí,...
+- không có hamburger
+
+- layout chia thành nhiều vùng: main content + sidebar + widgets
+- tin tức hiển thị:
+    + nhiều cột
+    + nhiều block song song
+- Elements bị ẩn trên mobile: sidebar, widget phụ, nhiều category, block nhỏ, quảng cáo lớn,...
+- font-size có thay đổi
