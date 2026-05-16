@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-primary;
+    background: $background-color;
+    color: $text-color;
+}
+
+.container {
+    margin: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+}
+
+.footer {
+    margin: 12px;
+    padding: $spacing-md;
+    text-align: center;
+
+    @include card-style;
+}

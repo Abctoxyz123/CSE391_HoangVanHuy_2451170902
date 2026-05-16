@@ -1,0 +1,157 @@
+.header {
+    margin: 12px;
+    padding: $spacing-md;
+
+    @include card-style;
+    @include flex-center;
+
+    justify-content: space-between;
+
+    .logo {
+        h1 {
+            margin: 0;
+        }
+    }
+
+    .menu {
+        display: block;
+        font-size: 24px;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .navbar {
+        display: none;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            font-weight: bold;
+
+            &:hover {
+                color: $primary-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.filter {
+    display: none;
+}
+
+.ads-bar {
+    display: none;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+
+    .card {
+        min-height: 160px;
+        padding: $spacing-md;
+
+        @include card-style;
+        @include flex-center;
+
+        &:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        &.card1 {
+            border-left: 5px solid red;
+        }
+
+        &.card2 {
+            border-left: 5px solid blue;
+        }
+
+        &.card3 {
+            border-left: 5px solid green;
+        }
+
+        &.card4 {
+            border-left: 5px solid orange;
+        }
+    }
+}
+
+/* TABLET */
+
+@include respond-to(tablet) {
+    .header {
+        display: block;
+
+        .menu {
+            display: none;
+        }
+
+        .navbar {
+            display: block;
+            margin-top: $spacing-md;
+
+            ul {
+                display: flex;
+                gap: 24px;
+            }
+        }
+    }
+
+    .filter {
+        display: block;
+        padding: $spacing-md;
+
+        @include card-style;
+
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-sm;
+        }
+    }
+
+    .main-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* DESKTOP */
+
+@include respond-to(desktop) {
+    body {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .container {
+        grid-template-columns: 220px 1fr 220px;
+        align-items: start;
+    }
+
+    .header {
+        .navbar {
+            ul {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    .main-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .ads-bar {
+        display: block;
+        padding: $spacing-md;
+
+        @include card-style;
+    }
+}

@@ -1,0 +1,25 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-style {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: $border-radius;
+}
+
+@mixin respond-to($device) {
+    @if $device == tablet {
+        @media (min-width: $breakpoint-tablet) {
+            @content;
+        }
+    }
+
+    @if $device == desktop {
+        @media (min-width: $breakpoint-desktop) {
+            @content;
+        }
+    }
+}
