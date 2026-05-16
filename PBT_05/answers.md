@@ -298,3 +298,297 @@ Câu C1
     + nhiều block song song
 - Elements bị ẩn trên mobile: sidebar, widget phụ, nhiều category, block nhỏ, quảng cáo lớn,...
 - font-size có thay đổi
+
+Câu C2
+
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt bàn nhà hàng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">Restaurant</div>
+        <div class="phone">Hotline: 0123 456 789</div>
+    </header>
+
+    <section class="hero">
+        Hero Image
+    </section>
+
+    <main class="layout">
+
+        <section class="content">
+            <section class="food-grid">
+                <div class="food-card">Món 1</div>
+                <div class="food-card">Món 2</div>
+                <div class="food-card">Món 3</div>
+                <div class="food-card">Món 4</div>
+                <div class="food-card">Món 5</div>
+                <div class="food-card">Món 6</div>
+            </section>
+
+            <section class="map">
+                Google Maps
+            </section>
+        </section>
+
+        <aside class="sidebar">
+            <form class="booking-form">
+                <h2>Đặt bàn</h2>
+
+                <input type="date">
+                <input type="time">
+                <input type="number" placeholder="Số người">
+                <textarea placeholder="Ghi chú"></textarea>
+
+                <button type="submit">Đặt bàn</button>
+            </form>
+        </aside>
+
+    </main>
+
+    <footer class="footer">
+        Footer
+    </footer>
+
+</body>
+</html>
+```
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header,
+.hero,
+.food-card,
+.map,
+.booking-form,
+.footer {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Mobile first */
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero {
+    height: 250px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content {
+    display: grid;
+    gap: 20px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.food-card {
+    height: 150px;
+}
+
+.map {
+    height: 250px;
+}
+
+.booking-form {
+    display: grid;
+    gap: 12px;
+}
+
+.booking-form input,
+.booking-form textarea,
+.booking-form button {
+    padding: 10px;
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+}
+```
+tablet layout
+```css
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .map {
+        height: 300px;
+    }
+}
+```
+Desktop layout
+```css
+@media (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sidebar {
+        position: sticky;
+        top: 20px;
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .map {
+        height: 350px;
+    }
+}
+```
+
+Mobile Wireframe
+```
+┌──────────────────────┐
+│ LOGO                 │
+│ Hotline: 0123456789  │
+└──────────────────────┘
+
+┌──────────────────────┐
+│                      │
+│      HERO IMAGE      │
+│                      │
+└──────────────────────┘
+
+┌──────────────────────┐
+│      ĐẶT BÀN         │
+│ [ Ngày            ]  │
+│ [ Giờ             ]  │
+│ [ Số người        ]  │
+│ [ Ghi chú         ]  │
+│ [  BUTTON ĐẶT    ]   │
+└──────────────────────┘
+
+┌──────────────────────┐
+│      MÓN ĂN 1        │
+└──────────────────────┘
+
+┌──────────────────────┐
+│      MÓN ĂN 2        │
+└──────────────────────┘
+
+┌──────────────────────┐
+│      MÓN ĂN 3        │
+└──────────────────────┘
+
+┌──────────────────────┐
+│      GOOGLE MAP      │
+└──────────────────────┘
+
+┌──────────────────────┐
+│       FOOTER         │
+└──────────────────────┘
+```
+
+Tablet Wireframe
+```
+┌──────────────────────────────────┐
+│ LOGO           Hotline           │
+└──────────────────────────────────┘
+
+┌──────────────────────────────────┐
+│                                  │
+│            HERO IMAGE            │
+│                                  │
+└──────────────────────────────────┘
+
+┌──────────────────────────────────┐
+│             ĐẶT BÀN              │
+│ [Ngày] [Giờ]                     │
+│ [Số người]                       │
+│ [Ghi chú.............]           │
+│ [ BUTTON ĐẶT ]                   │
+└──────────────────────────────────┘
+
+┌──────────────┬──────────────┐
+│   MÓN ĂN 1   │   MÓN ĂN 2   │
+├──────────────┼──────────────┤
+│   MÓN ĂN 3   │   MÓN ĂN 4   │
+├──────────────┼──────────────┤
+│   MÓN ĂN 5   │   MÓN ĂN 6   │
+└──────────────┴──────────────┘
+
+┌──────────────────────────────────┐
+│            GOOGLE MAP            │
+└──────────────────────────────────┘
+
+┌──────────────────────────────────┐
+│              FOOTER              │
+└──────────────────────────────────┘
+```
+
+Desktop Wireframe
+```
+┌────────────────────────────────────────────────────┐
+│ LOGO                             Hotline           │
+└────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────────────┐
+│                                                    │
+│                    HERO IMAGE                      │
+│                                                    │
+└────────────────────────────────────────────────────┘
+
+
+┌───────────────────────┬────────────────────────────┐
+│                       │                            │
+│      MÓN ĂN 1         │        ĐẶT BÀN             │
+├───────────────────────│ [Ngày]                     │
+│      MÓN ĂN 2         │ [Giờ]                      │
+├───────────────────────│ [Số người]                 │
+│      MÓN ĂN 3         │ [Ghi chú........]          │
+├───────────────────────│ [ BUTTON ĐẶT ]             │
+│      MÓN ĂN 4         │                            │
+├───────────────────────┴────────────────────────────┤
+│                    GOOGLE MAP                      │
+└────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────────────┐
+│                      FOOTER                        │
+└────────────────────────────────────────────────────┘
+```
