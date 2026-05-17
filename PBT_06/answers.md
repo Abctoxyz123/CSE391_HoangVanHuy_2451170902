@@ -65,3 +65,86 @@ Class `d-none d-md-block` tức là khi độ rộng của trang nhỏ hơn md t
 | `container-fluid` | Luôn full chiều ngang 100% |
 | `container-md` | Full width ở mobile, có max width tử md trở lên |
 
+Câu C1
+
+1. Bạn muốn đổi màu $primary từ xanh mặc định sang #E63946. Giải thích quy trình (cần công cụ gì, modify file nào).
+
+    Bước 1: Tạo file SCSS riêng
+
+    Bước 2: Override variable trước khi import Bootstrap
+    ```scss
+    $primary: #E63946;
+    @import "node_modules/bootstrap/scss/bootstrap";
+    ```
+    Bước 3: Compile SCSS --> CSS: cần các công cụ có thể chuyển đổi từ file .scss --> .css
+
+    Bước 4: Link file CSS custom
+
+2. Vì sao KHÔNG nên override trực tiếp?
+
+- Vấn đề 1: Chỉ sửa được 1 component
+- Vấn đề 2: Specificity war
+- Vấn đề 3: Khó duy trì, bời sau vài tháng, không ai nhớ class nào bị override
+- Vấn đề 4: Mất tính hệ thống: SCSS variables giúp chúng ta có 1 nguồn dữ liệu trung tâm => đổi 1 nơi, toàn hệ thống đổi theo.
+
+Câu C2
+
+1. Số dòng CSS cần viết
+
+CSS thuần
+- Có thể lên đến 50-60 dòng CSS
+
+Bootstrap
+- chủ yếu dùng utility classes, CSS tự viết rất ít.
+
+2. Thời gian phát triển
+
+CSS thuần
+
+Chậm hơn vì:
+
++ phải design layout
++ debug responsie
++ fix spacing
++ test breakpoint
+
+Bootstrap
+
+Nhanh hơn cực nhiều
+
+3. Khả năng tùy biến
+
+CSS thuần
+
+Mạnh nhất
+
+Bạn kiểm soát:
+
++ từng pixel
++ animation
++ architecture
++ design system
+
+Bootstrap
+
+Bị giới hạn theo framework.
+
+4. Khi nào nên dùng Bootstrap
+
+Dùng khi:
+
+- admin dashboard
+- CRUD app
+- MVP
+- prototype
+- deadline ngắn
+- team nhỏ
+- project nội bộ
+
+Không nên khi:
+
+- website cần design độc quyền
+- animation phức tạp
+- performance cực tối ưu
+- UI/UX custom cao
+- sản phẩm lớn có design system riêng
