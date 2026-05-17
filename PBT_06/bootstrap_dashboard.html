@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Admin Dashboard</title>
+    <style>
+        /* body{
+            display: flex;
+            grid-template-columns: 1fr 1fr;
+        } */
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="position-fixed top-0 start-0" style="width: 250px;z-index: 1000;">
+        <h4 class="mb-4">Admin Panel</h4>
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">Dashboard</a>
+            <a href="#" class="list-group-item list-group-item-action">Orders</a>
+            <a href="#" class="list-group-item list-group-item-action">Products</a>
+            <a href="#" class="list-group-item list-group-item-action">Customers</a>
+            <a href="#" class="list-group-item list-group-item-action">Settings</a>
+        </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="ms-auto" style="margin-left: 250px !important;">
+
+        <!-- TOPBAR -->
+        <nav class="navbar navbar-expand bg-light border-bottom px-4">
+            <div class="container-fluid">
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                </nav>
+
+                <div class="dropdown">
+                    <button class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown">
+                        Admin User
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <!-- CONTENT AREA -->
+        <section class="container-fluid p-4">
+
+            <!-- ALERT -->
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Thao tác thành công!
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+
+
+            <!-- ROW 1: STAT CARDS -->
+            <div class="row g-4 mb-4">
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Doanh thu</h5>
+                            <p class="fs-3 mb-0">25M</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Đơn hàng</h5>
+                            <p class="fs-3 mb-0">120</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card bg-warning text-dark">
+                        <div class="card-body">
+                            <h5 class="card-title">Khách hàng</h5>
+                            <p class="fs-3 mb-0">89</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card bg-danger text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Hủy đơn</h5>
+                            <p class="fs-3 mb-0">7</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- ROW 2: TABLE -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    Danh sách đơn hàng
+                </div>
+
+                <div class="card-body table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Mã đơn</th>
+                                <th>Khách hàng</th>
+                                <th>Sản phẩm</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>iPhone 16</td>
+                                <td>25.000.000đ</td>
+                                <td><span class="badge bg-success">Hoàn thành</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>#002</td>
+                                <td>Trần Thị B</td>
+                                <td>MacBook Pro</td>
+                                <td>45.000.000đ</td>
+                                <td><span class="badge bg-warning text-dark">Đang xử lý</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>#003</td>
+                                <td>Lê Văn C</td>
+                                <td>AirPods</td>
+                                <td>5.000.000đ</td>
+                                <td><span class="badge bg-danger">Đã hủy</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <!-- ROW 3: SEARCH FILTER FORM -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    Tìm kiếm đơn hàng
+                </div>
+
+                <div class="card-body">
+                    <form class="row g-3">
+
+                        <div class="col-12 col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text">Từ khóa</span>
+                                <input type="text" class="form-control" placeholder="Nhập mã đơn hoặc tên khách">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <select class="form-select">
+                                <option selected>Trạng thái</option>
+                                <option>Hoàn thành</option>
+                                <option>Đang xử lý</option>
+                                <option>Đã hủy</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-md-2">
+                            <button class="btn btn-primary w-100">
+                                Lọc
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- ACCORDION FAQ -->
+            <div class="accordion" id="faqAccordion">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Câu hỏi 1: Dashboard dùng để làm gì?
+                        </button>
+                    </h2>
+
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Dashboard dùng để quản lý đơn hàng, sản phẩm, khách hàng và doanh thu.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Câu hỏi 2: Có thể lọc đơn hàng không?
+                        </button>
+                    </h2>
+
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Có. Form tìm kiếm phía trên dùng để nhập từ khóa và chọn trạng thái đơn hàng.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+    <p>Lorem</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
